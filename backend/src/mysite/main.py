@@ -125,7 +125,7 @@ async def lifespan(app: FastAPI):
 # ── App ───────────────────────────────────────────────────────────────────────
 
 app = FastAPI(lifespan=lifespan, title="InSync API")
-ALLOWED_ORIGINS = {"http://localhost", "http://localhost:3000"}
+ALLOWED_ORIGINS = {"http://localhost", "http://localhost:3000", "https://invigorating-gentleness-production-4a1c.up.railway.app"}
 
 @app.exception_handler(HTTPException)
 async def http_exception_handler(request: Request, exc: HTTPException):
